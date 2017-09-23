@@ -1,0 +1,9 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {"url": "data/data.json"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "a", "type": "nominal"},
+      "y": {"field": "b", "type": "quantitative"}
+  }
+}
