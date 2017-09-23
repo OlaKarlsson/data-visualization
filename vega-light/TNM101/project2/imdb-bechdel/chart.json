@@ -1,0 +1,9 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {"url": "data/merged_imdb_bechdel.json"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "title_year", "type": "nominal"},
+      "y": {"field": "*", "type": "quantitative"}
+  }
+}
