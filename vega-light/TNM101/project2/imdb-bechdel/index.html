@@ -16,10 +16,33 @@
 </head>
 
 <body>
+
+<button id="myBtn">Swap</button>
+
   <div id="vis"></div>
 
   <script>
-    const spec = "chart.json";
-    vega.embed('#vis', spec);
+    const opt = {"actions":false}
+    var spec = "average-per-year.json";
+
+
+    vega.embed('#vis', spec, opt).then(function(result) {
+    // access view as result.view
+    }).catch(console.error);
+
+
+    var el = document.getElementById("myBtn");
+    el.addEventListener("click", swapViz, false);
+
+    function swapViz(){
+      var spec2 = "test.json";
+      vega.embed('#vis', spec2, opt).then(function(result) {
+      // access view as result.view
+      }).catch(console.error);
+
+
+    }
+
+
   </script>
 </body>
